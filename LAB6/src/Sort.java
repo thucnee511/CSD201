@@ -117,9 +117,7 @@ public class Sort {
 
     private static void heapSort(Employee[] empList) {
         PriorityQueue<Employee> heap = new PriorityQueue<>();
-        for (int i = 0; i < empList.length; i++) {
-            heap.add(empList[i]);
-        }
+        heap.addAll(Arrays.asList(empList));
         for (int i = 0; i < empList.length; i++) {
             empList[i] = heap.poll();
         }
