@@ -37,13 +37,13 @@ public class Sort {
         }
     }
     public static void mergeSort(Employee[] empList , boolean asc){
-        mergeSort(empList, 0, empList.length);
+        mergeSort(empList, 0, empList.length-1);
         if (!asc){
             Collections.reverse(Arrays.asList(empList));
         }
     }
     public static void quickSort(Employee[] empList , boolean asc){
-        quickSort(empList, 0, empList.length);
+        quickSort(empList, 0, empList.length-1);
     }
 
     private static void quickSort(Employee[] empList, int l, int r) {
